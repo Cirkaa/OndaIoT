@@ -1,0 +1,15 @@
+# STM32 build files
+stm32/Debug/
+stm32/Release/
+stm32/.settings/
+stm32/.metadata/
+
+# Python
+raspberry-pi/__pycache__/
+raspberry-pi/*.pyc
+raspberry-pi/.env
+
+# General
+.DS_Store
+*.swp
+*.swo
