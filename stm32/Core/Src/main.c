@@ -112,10 +112,12 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
       int randomNumber = rand() % 100 + 1; // Genera un número entre 1 y 100
+      int randomNumber2 = rand() % 100 + 1; // Genera un número entre 1 y 100
+      int randomNumber3 = rand() % 100 + 1; // Genera un número entre 1 y 100
 
       char msg[50]; // Buffer para construir el mensaje
       // Formatea el mensaje: "Número aleatorio: XX\r\n"
-      sprintf(msg, "Numero aleatorio: %d\r\n", randomNumber);
+      sprintf(msg, "Numeros aleatorios: %d, %d, %d\r\n", randomNumber, randomNumber2, randomNumber3);
 
       // Envía el mensaje por UART.
       // Usamos HAL_UART_Transmit directamente o printf si redirigiste __io_putchar.
@@ -126,7 +128,7 @@ int main(void)
       // HAL_UART_Transmit(&huart2, (uint8_t *)msg, strlen(msg), HAL_MAX_DELAY);
       // Necesitarías #include <string.h> para strlen
 
-      HAL_Delay(1000); // Espera 1 segundo (1000 milisegundos)
+      HAL_Delay(100); // Espera 0,1 segundo (100 milisegundos)
     }
   /* USER CODE END 3 */
 }
